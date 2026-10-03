@@ -4,4 +4,4 @@ a https://github.com/fastfetch-cli/fastfetch like tool but its shows info of you
 
 <img width="625" height="485" alt="showcase" src="https://github.com/user-attachments/assets/fe643f67-e060-48de-891a-73e715367f82" />
 
-(ASCII art looks little weird on the picture but i fixed it that it looks rounder!)
+(ASCII art looks little weird on the picture but i fixed it.)

@@ -11,10 +11,10 @@ print("\033[97m" r"""
                               ````````::::::::                                 
                       .::::::::::::::::::::::: iiiiiii,                        
                   .:::::::::::::::::::::::::: iiiiiiiii.                       
-                   ::::::::::::::::::::::::::: iiiiiiiiii                      
-                   ::::::::::::::::::::::::::: iiiiiiiiii                      
-                   :::::::::: ,,,,,,,,,,,,,,,,,iiiiiiiiii                      
-                   :::::::::: iiiiiiiiiiiiiiiiiiiiiiiiiii                      
+                  .::::::::::::::::::::::::::: iiiiiiiiii.                      
+                  .::::::::::::::::::::::::::: iiiiiiiiii.                      
+                  .:::::::::: ,,,,,,,,,,,,,,,,,iiiiiiiiii.                      
+                  .:::::::::: iiiiiiiiiiiiiiiiiiiiiiiiiii.                      
                    `::::::::: iiiiiiiiiiiiiiiiiiiiiiiiii`                      
                       `:::::: iiiiiiiiiiiiiiiiiiiiiii`                         
                               iiiiiiii,,,,,,,,                                 

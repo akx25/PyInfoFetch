@@ -1,6 +1,7 @@
 # PythonFetch
 a https://github.com/fastfetch-cli/fastfetch like tool but its shows info of your Python things.
-<img width="625" height="479" alt="showcase" src="https://github.com/user-attachments/assets/c95a3ae3-ac70-48e1-8cc8-343795f4ae05" />
+<img width="927" height="353" alt="PythonFetch_Preview" src="https://github.com/user-attachments/assets/06f10df5-9fe1-489b-85d4-dc9b15410256" />
+
 
 In order to make the tool work, you need to install Python if you haven't already done so.
 

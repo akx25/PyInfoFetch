@@ -4,11 +4,22 @@ import platform
 from importlib.metadata import version, distributions, PackageNotFoundError
 
 
+
+print("If you got somekind of error report it to me on Discord: @ak0101101")
+print("or on GitHub: https://github.com/akx25/PythonFetch/issues")
+print("")
+print("Tip: If PythonFetch looks glitchy/weird try fullscreen!")
+print("")
+print("")
+print("")
+
+
+
 logo = r"""
-            .::::::::::.
-            ::``::::::::::.
-            :::..:::::::::::
-            ````````::::::::
+        .::::::::::.
+        ::``::::::::::.
+        :::..:::::::::::
+        ````````::::::::
 .::::::::::::::::::::::: iiiiiii,
 .:::::::::::::::::::::::::: iiiiiiiii.
  ::::::::::::::::::::::::::: iiiiiiiiii
@@ -78,12 +89,15 @@ logo_lines = logo.splitlines()
 
 width = max(len(line) for line in logo_lines)
 
+# Move information down by 3 lines
 info_offset = 3
 
 for i in range(max(len(logo_lines), len(info) + info_offset)):
 
+    # Logo on the left
     left = logo_lines[i] if i < len(logo_lines) else ""
 
+    # Information on the right, shifted down
     info_index = i - info_offset
 
     if 0 <= info_index < len(info):
@@ -94,7 +108,3 @@ for i in range(max(len(logo_lines), len(info) + info_offset)):
     print(
         f"\033[97m{left:<{width}}\033[0m    {right}"
     )
-
-
-
-sys.stdout.flush()

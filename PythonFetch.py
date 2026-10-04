@@ -3,75 +3,101 @@ import os
 import platform
 from importlib.metadata import version, distributions, PackageNotFoundError
 
-print("\033[97m" r"""
-                                                                          
-                                .::::::::::.                                   
-                              .::``::::::::::.                                 
-                              :::..:::::::::::                                 
-                              ````````::::::::                                 
-                      .::::::::::::::::::::::: iiiiiii,                        
-                  .:::::::::::::::::::::::::: iiiiiiiii.                       
-                  .::::::::::::::::::::::::::: iiiiiiiiii.                      
-                  .::::::::::::::::::::::::::: iiiiiiiiii.                      
-                  .:::::::::: ,,,,,,,,,,,,,,,,,iiiiiiiiii.                      
-                  .:::::::::: iiiiiiiiiiiiiiiiiiiiiiiiiii.                      
-                   `::::::::: iiiiiiiiiiiiiiiiiiiiiiiiii`                      
-                      `:::::: iiiiiiiiiiiiiiiiiiiiiii`                         
-                              iiiiiiii,,,,,,,,                                 
-                              iiiiiiiiiii''iii                                 
-                              `iiiiiiiiii..ii`                                 
-                                `iiiiiiiiii`                                   
-                                                                               
-                      ____        _   _                                        
-                     |  _ \ _   _| |_| |__   ___  _ __                         
-                     | |_) | | | | __| '_ \ / _ \| '_ \                        
-                     |  __/| |_| | |_| | | | (_) | | | |                       
-                     |_|    \__, |\__|_| |_|\___/|_| |_|                       
-                            |___/                                              
-                                                                                 
-                                                                          
-                                                                """ "\033[0m")
+
+logo = r"""
+            .::::::::::.
+            ::``::::::::::.
+            :::..:::::::::::
+            ````````::::::::
+.::::::::::::::::::::::: iiiiiii,
+.:::::::::::::::::::::::::: iiiiiiiii.
+ ::::::::::::::::::::::::::: iiiiiiiiii
+ ::::::::::::::::::::::::::: iiiiiiiiii
+ :::::::::: ,,,,,,,,,,,,,,,,,iiiiiiiiii
+ :::::::::: iiiiiiiiiiiiiiiiiiiiiiiiiii
+ `::::::::: iiiiiiiiiiiiiiiiiiiiiiiiii
+    `:::::: iiiiiiiiiiiiiiiiiiiiiii
+            iiiiiiii,,,,,,,,
+            iiiiiiiiiii''iii
+            `iiiiiiiiii..ii
+              `iiiiiiiiii`
+
+____        _   _
+|  _ \ _   _| |_| |__   ___  _ __
+| |_) | | | | __| '_ \ / _ \| '_ \
+|  __/| |_| | |_| | | | (_) | | | |
+|_|    \__, |\__|_| |_|\___/|_| |_|
+       |___/
+""".strip("\n")
 
 
-# Python
+
 python = platform.python_version()
-print(f"Python Version:        {python}")
 
 python_implementation = platform.python_implementation()
-print(f"Python Implementation: {python_implementation}")
 
 python_compiler = platform.python_compiler()
-print(f"Python Compiler:       {python_compiler}")
 
 python_executable = sys.executable
-print(f"Python Executable:     {python_executable}")
 
 
-# Pip
+
 try:
     pip = version("pip")
 except PackageNotFoundError:
     pip = "Not installed"
 
-print(f"Pip Version:           {pip}")
 
 
-# Python Packages
 packages = list(distributions())
-print(f"Python Packages:       {len(packages)}")
 
 
-# Python Path
+
 python_path = os.getcwd()
-print(f"Python Path:           {python_path}")
 
 
-# Websites
+
 website = ("python.org", "pypi.org")
-print(f"Websites:              {website[0]}, {website[1]}")
 
-print("")
-print("")
 
-# Return to PowerShell / Terminal
+
+info = [
+    f"Python Version:        {python}",
+    f"Python Implementation: {python_implementation}",
+    f"Python Compiler:       {python_compiler}",
+    f"Python Executable:     {python_executable}",
+    f"Pip Version:           {pip}",
+    f"Python Packages:       {len(packages)}",
+    f"Python Path:           {python_path}",
+    f"Websites:              {website[0]}, {website[1]}",
+]
+
+
+
+logo_lines = logo.splitlines()
+
+width = max(len(line) for line in logo_lines)
+
+# Move information down by 3 lines
+info_offset = 3
+
+for i in range(max(len(logo_lines), len(info) + info_offset)):
+
+    # Logo on the left
+    left = logo_lines[i] if i < len(logo_lines) else ""
+
+    # Information on the right, shifted down
+    info_index = i - info_offset
+
+    if 0 <= info_index < len(info):
+        right = info[info_index]
+    else:
+        right = ""
+
+    print(
+        f"\033[97m{left:<{width}}\033[0m    {right}"
+    )
+
+
+
 sys.stdout.flush()

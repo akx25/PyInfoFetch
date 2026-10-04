@@ -78,15 +78,12 @@ logo_lines = logo.splitlines()
 
 width = max(len(line) for line in logo_lines)
 
-# Move information down by 3 lines
 info_offset = 3
 
 for i in range(max(len(logo_lines), len(info) + info_offset)):
 
-    # Logo on the left
     left = logo_lines[i] if i < len(logo_lines) else ""
 
-    # Information on the right, shifted down
     info_index = i - info_offset
 
     if 0 <= info_index < len(info):

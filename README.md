@@ -2,6 +2,8 @@
 a https://github.com/fastfetch-cli/fastfetch like tool but its shows info of your Python things.
 <img width="927" height="353" alt="PythonFetch_Preview" src="https://github.com/user-attachments/assets/06f10df5-9fe1-489b-85d4-dc9b15410256" />
 
+(Python ASCII text T & H looks funny in the picture but its fixed in the code!)
+
 
 In order to make the tool work, you need to install Python if you haven't already done so.
 
